@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.testng.annotations.DataProvider;
 
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions(
 		plugin = {"pretty",
 //				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
