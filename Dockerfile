@@ -4,4 +4,6 @@ COPY src /home/CC_BDD_TNG/src
 
 COPY pom.xml /home/CC_BDD_TNG
 
+COPY docker-compose.yml /home/CC_BDD_TNG
+
 RUN mvn -f /home/CC_BDD_TNG/pom.xml clean test -DskipTests=true

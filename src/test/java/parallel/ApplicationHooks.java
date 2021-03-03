@@ -6,6 +6,8 @@ import java.util.Properties;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
+
 import com.qa.factory.DriverFactory;
 import com.qa.util.ConfigReader;
 
@@ -19,17 +21,17 @@ public class ApplicationHooks {
 	private ConfigReader configReader;
 	Properties prop;
 	
-	@Before(order = 0)
-	public void getProperty() {
-		configReader = new ConfigReader();
-		prop=configReader.init_prop();
-	}
+//	@Before(order = 0)
+//	public void getProperty() {
+//		configReader = new ConfigReader();
+//		prop=configReader.init_prop();
+//	}
 
-	@Before(order = 1)
+	@Before(order = 0) //order = 1
 	public void launchBrowser() throws MalformedURLException {
-		String port=prop.getProperty("port");
+		//String port=prop.getProperty("port");
 		driverFactory = new DriverFactory();	
-		driver = driverFactory.int_driver(port);
+		driver = driverFactory.int_driver("4546");
 	}
 	
 	@After (order = 0)
