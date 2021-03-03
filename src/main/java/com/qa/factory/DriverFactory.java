@@ -3,6 +3,7 @@ package com.qa.factory;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -25,31 +26,32 @@ public class DriverFactory {
 		
 		//if(Port.equalsIgnoreCase("4546"))
         //{
-            nodeURL = "http://127.0.0.1:4444/wd/hub";
-            System.out.println("Chrome Browser Initiated");
-            ChromeOptions options = new ChromeOptions();
-            
-            DesiredCapabilities capabilities = DesiredCapabilities.chrome();            
-            capabilities.setBrowserName("chrome");
-            //capabilities.setPlatform(Platform.LINUX);
-            options.merge(capabilities);
-            
-            driver = new RemoteWebDriver(new URL(nodeURL),options);
-            
-            tlDriver.set(new ChromeDriver());
+//            nodeURL = "http://127.0.0.1:4444/wd/hub";
+//            System.out.println("Chrome Browser Initiated");
+//            ChromeOptions options = new ChromeOptions();
+//            
+//            DesiredCapabilities capabilities = DesiredCapabilities.chrome();            
+//            capabilities.setBrowserName("chrome");
+//            //capabilities.setPlatform(Platform.LINUX);
+//            options.merge(capabilities);
+//            
+//            driver = new RemoteWebDriver(new URL(nodeURL),options);
+//            System.setProperty("webdriver.chrome.driver","src/test/resources/webdriver/windows/chromedriver.exe");
+//            tlDriver.set(new ChromeDriver());
             
         //} 
 //		else
 //            if(Port.equalsIgnoreCase("5566"))
 //            {
-//                nodeURL = "http://127.0.0.1:4444/wd/hub";
-//                System.out.println("Firefox Browser Initiated");
-//                DesiredCapabilities capabilities1 = DesiredCapabilities.firefox();
-//                capabilities1.setBrowserName("firefox");
-//                capabilities1.setPlatform(Platform.WINDOWS);
-//                
-//                driver = new RemoteWebDriver(new URL(nodeURL),capabilities1);   
-//                
+                nodeURL = "http://127.0.0.1:4444/wd/hub";
+                System.out.println("Firefox Browser Initiated");
+                DesiredCapabilities capabilities1 = DesiredCapabilities.firefox();
+                capabilities1.setBrowserName("firefox");
+//                capabilities1.setVersion("85");
+//                capabilities1.setPlatform(Platform.LINUX);
+                //driver = new RemoteWebDriver(new URL(nodeURL),capabilities1);   
+                //System.setProperty("webdriver.gecko.driver","src/test/resources/webdriver/windows/geckodriver.exe");
+            	tlDriver.set(new RemoteWebDriver(new URL(nodeURL),capabilities1));
 //            }
 //            else
 //                
