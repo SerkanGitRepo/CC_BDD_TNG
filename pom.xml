@@ -91,7 +91,7 @@
 						<include>**/ParallelRun.java</include>
 					</includes>
 					<parallel>methods</parallel>
-					<useUnlimitedThreads>false</useUnlimitedThreads>
+					<useUnlimitedThreads>true</useUnlimitedThreads>
 				</configuration>
 			</plugin>
       </plugins>
