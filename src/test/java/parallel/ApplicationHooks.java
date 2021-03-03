@@ -1,5 +1,6 @@
 package parallel;
 
+import java.net.MalformedURLException;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -25,10 +26,10 @@ public class ApplicationHooks {
 	}
 
 	@Before(order = 1)
-	public void launchBrowser() {
-		String browserName=prop.getProperty("browser");
+	public void launchBrowser() throws MalformedURLException {
+		String port=prop.getProperty("port");
 		driverFactory = new DriverFactory();	
-		driver = driverFactory.int_driver(browserName);
+		driver = driverFactory.int_driver(port);
 	}
 	
 	@After (order = 0)
