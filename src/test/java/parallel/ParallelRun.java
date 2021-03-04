@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
 //@RunWith(Cucumber.class)
 @CucumberOptions(
 		plugin = {"pretty",
-//				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/"
 		},
 		monochrome=true,
