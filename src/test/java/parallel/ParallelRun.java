@@ -1,23 +1,24 @@
 package parallel;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+//import io.cucumber.junit.Cucumber;
+//import io.cucumber.junit.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-import org.junit.runner.RunWith;
+//import org.junit.runner.RunWith;
 import org.testng.annotations.DataProvider;
+import extentReports.ExtentTestManager;
 
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(
-		plugin = {"pretty",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"timeline:test-output-thread/" 
-		},
-		monochrome=true,
-		glue = {"parallel"},
-		features= {"src/test/resources/parallel"}
-		)
+//@CucumberOptions(
+//		plugin = {"pretty",
+//				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+//				"timeline:test-output-thread/" 
+//		},
+//		monochrome=true,
+//		glue = {"parallel"},
+//		features= {"src/test/resources/parallel"}
+//		)
 
 public class ParallelRun extends AbstractTestNGCucumberTests {
 	
