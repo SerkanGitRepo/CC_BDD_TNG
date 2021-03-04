@@ -2,7 +2,6 @@ package parallel;
 
 import java.util.List;
 import java.util.Map;
-
 import com.pages.AccountPage;
 import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
@@ -10,6 +9,7 @@ import com.qa.factory.DriverFactory;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+
 
 public class AccountPageSteps {
 	

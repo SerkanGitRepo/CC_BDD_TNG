@@ -19,6 +19,9 @@
     <cucumber.version>6.9.0</cucumber.version>
     <maven.compiler.version>3.8.1</maven.compiler.version>
     <maven.surefire.version>2.22.2</maven.surefire.version>
+    <serenity.version>2.3.12</serenity.version>
+    <serenity.maven.version>2.3.12</serenity.maven.version>
+    <serenity.cucumber.version>2.3.12</serenity.cucumber.version>
   </properties>
 
   <dependencies>
@@ -64,9 +67,25 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-		<groupId>com.aventstack</groupId>
-		<artifactId>extentreports</artifactId>
-		<version>3.1.5</version>
+		<groupId>net.serenity-bdd</groupId>
+		<artifactId>serenity-core</artifactId>
+		<version>${serenity.version}</version>
+		<scope>test</scope>
+	</dependency>
+    <dependency>
+		<groupId>net.serenity-bdd</groupId>
+		<artifactId>serenity-junit</artifactId>
+		<version>${serenity.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>net.serenity-bdd</groupId>
+		<artifactId>serenity-ensure</artifactId>
+		<version>${serenity.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>net.serenity-bdd</groupId>
+		<artifactId>serenity-cucumber6</artifactId>
+		<version>${serenity.cucumber.version}</version>
 	</dependency>
   </dependencies>
 
@@ -93,6 +112,30 @@
 					<parallel>methods</parallel>
 					<useUnlimitedThreads>true</useUnlimitedThreads>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.serenity-bdd.maven.plugins</groupId>
+				<artifactId>serenity-maven-plugin</artifactId>
+				<version>${serenity.maven.version}</version>
+				<configuration>
+					<tags>${tags}</tags>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>net.serenity-bdd</groupId>
+						<artifactId>serenit-core</artifactId>
+						<version>${serenity.version}</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>serenity-reports</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
       </plugins>
   </build>

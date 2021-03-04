@@ -1,7 +1,6 @@
 package parallel;
 
 import org.junit.Assert;
-
 import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
 

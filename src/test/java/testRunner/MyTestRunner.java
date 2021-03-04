@@ -1,18 +1,15 @@
 package testRunner;
 import org.junit.runner.RunWith;
 
-import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 
-@RunWith(Cucumber.class)
+@RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-		features= {"src/test/resources/AppFeatures"},
-		glue = {"stepdefinitions","AppHooks"},
-		plugin = {"pretty",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"timeline:test-output-thread/"
-		}
+		features= {"src/test/resources/parallel"},
+		glue = {"parallel"},
+		plugin = {"pretty"}
 		)
 public class MyTestRunner {
 

@@ -3,18 +3,15 @@ package parallel;
 //import io.cucumber.junit.Cucumber;
 //import io.cucumber.junit.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
 
-//import org.junit.runner.RunWith;
+import org.junit.runner.RunWith;
 import org.testng.annotations.DataProvider;
-import extentReports.ExtentTestManager;
 
 
-//@RunWith(Cucumber.class)
+@RunWith(CucumberWithSerenity.class)
 //@CucumberOptions(
-//		plugin = {"pretty",
-//				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-//				"timeline:test-output-thread/" 
-//		},
+//		plugin = {"pretty"},
 //		monochrome=true,
 //		glue = {"parallel"},
 //		features= {"src/test/resources/parallel"}
