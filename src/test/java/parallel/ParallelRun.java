@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 		plugin = {"cucumberHooks.customReportListener"},
 		monochrome=true,
 		glue = {"parallel","cucumberHooks"},
-		features= {"src\\test\\resources\\parallel"}
+		features= {"src/test/resources/parallel"}
 		)
 
 public class ParallelRun extends AbstractTestNGCucumberTests {
