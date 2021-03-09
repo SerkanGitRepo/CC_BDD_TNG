@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="37704" started-at="2021-03-09T12:19:46 EET" finished-at="2021-03-09T12:20:24 EET">
+  <suite name="Suite" duration-ms="35552" started-at="2021-03-09T12:48:07 EET" finished-at="2021-03-09T12:48:43 EET">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test" duration-ms="37704" started-at="2021-03-09T12:19:46 EET" finished-at="2021-03-09T12:20:24 EET">
+    <test name="Test" duration-ms="35552" started-at="2021-03-09T12:48:07 EET" finished-at="2021-03-09T12:48:43 EET">
       <class name="parallel.ParallelRun">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="setUpClass" is-config="true" duration-ms="518" started-at="2021-03-09T12:19:46 EET" finished-at="2021-03-09T12:19:47 EET">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="setUpClass" is-config="true" duration-ms="507" started-at="2021-03-09T12:48:07 EET" finished-at="2021-03-09T12:48:08 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="35241" started-at="2021-03-09T12:19:47 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:20:22 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="33747" started-at="2021-03-09T12:48:08 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:48:42 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Accounts section count"]]>
+                <![CDATA["Accounts Page Title"]]>
               </value>
             </param>
             <param index="1">
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="34040" started-at="2021-03-09T12:19:47 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:20:21 EET">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="26987" started-at="2021-03-09T12:48:08 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:48:35 EET">
           <params>
             <param index="0">
               <value>
@@ -50,8 +50,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ZHLEVL15008', ip: '172.27.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 85.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210118153634, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 1949, moz:profile: /tmp/rust_mozprofileBHKNtC, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.19.121-linuxkit, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: d709a529-d881-4358-94f5-570...}
-Session ID: d709a529-d881-4358-94f5-5704dc765f33
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 85.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210118153634, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 2799, moz:profile: /tmp/rust_mozprofilenoUWUQ, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.19.121-linuxkit, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: a9c0ed52-65fa-4372-96cf-de0...}
+Session ID: a9c0ed52-65fa-4372-96cf-de03b9b0fe2e
 *** Element info: {Using=link text, value=Forgot your password?11}]]>
             </message>
             <full-stacktrace>
@@ -60,8 +60,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'ZHLEVL15008', ip: '172.27.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 85.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210118153634, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 1949, moz:profile: /tmp/rust_mozprofileBHKNtC, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.19.121-linuxkit, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: d709a529-d881-4358-94f5-570...}
-Session ID: d709a529-d881-4358-94f5-5704dc765f33
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 85.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210118153634, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 2799, moz:profile: /tmp/rust_mozprofilenoUWUQ, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.19.121-linuxkit, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: a9c0ed52-65fa-4372-96cf-de0...}
+Session ID: a9c0ed52-65fa-4372-96cf-de03b9b0fe2e
 *** Element info: {Using=link text, value=Forgot your password?11}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -85,11 +85,11 @@ at ✽.forgot your password link should be displayed(file:///C:/Testing/workspac
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="36413" started-at="2021-03-09T12:19:47 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:20:23 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="34134" started-at="2021-03-09T12:48:08 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:48:42 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Accounts Page Title"]]>
+                <![CDATA["Accounts section count"]]>
               </value>
             </param>
             <param index="1">
@@ -101,7 +101,7 @@ at ✽.forgot your password link should be displayed(file:///C:/Testing/workspac
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="33911" started-at="2021-03-09T12:19:47 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:20:20 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="27756" started-at="2021-03-09T12:48:08 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:48:36 EET">
           <params>
             <param index="0">
               <value>
@@ -117,7 +117,7 @@ at ✽.forgot your password link should be displayed(file:///C:/Testing/workspac
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="35178" started-at="2021-03-09T12:19:47 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:20:22 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="runScenario" duration-ms="33402" started-at="2021-03-09T12:48:08 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-03-09T12:48:41 EET">
           <params>
             <param index="0">
               <value>
@@ -133,7 +133,7 @@ at ✽.forgot your password link should be displayed(file:///C:/Testing/workspac
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="tearDownClass" is-config="true" duration-ms="670" started-at="2021-03-09T12:20:23 EET" finished-at="2021-03-09T12:20:24 EET">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:parallel.ParallelRun@307f6b8c]" name="tearDownClass" is-config="true" duration-ms="808" started-at="2021-03-09T12:48:42 EET" finished-at="2021-03-09T12:48:43 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

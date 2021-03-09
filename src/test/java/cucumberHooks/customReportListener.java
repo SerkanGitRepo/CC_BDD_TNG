@@ -73,7 +73,7 @@ public class customReportListener implements EventListener{
     // Here we create the reporter
     private void runStarted(TestRunStarted event) {
     	//String path = System.getProperty("user.dir")+"\\reports\\index.html";
-    	String path = "/reports/index.html";
+    	String path = "reports/index.html";
         spark = new ExtentSparkReporter(path);
         extent = new ExtentReports();
         spark.config().setTheme(Theme.DARK);
