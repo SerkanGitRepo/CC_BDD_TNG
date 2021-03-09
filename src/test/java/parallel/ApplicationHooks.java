@@ -3,24 +3,26 @@ package parallel;
 import java.net.MalformedURLException;
 import java.util.Properties;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-
-
-import com.qa.factory.DriverFactory;
-import com.qa.util.ConfigReader;
+//import org.openqa.selenium.OutputType;
+//import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+
+import utilities.DriverFactory;
+
+//import utilities.ConfigReader;
+
 
 public class ApplicationHooks {
+
 	
-	private DriverFactory driverFactory;
+	public DriverFactory driverFactory;
 	private WebDriver driver;
-	private ConfigReader configReader;
-	Properties prop;
+//	private ConfigReader configReader;
+//	Properties prop;
 	
 //	@Before(order = 0)
 //	public void getProperty() {
@@ -35,19 +37,24 @@ public class ApplicationHooks {
 		driver = driverFactory.int_driver("4546");
 	}
 	
+//	@Before(order = 1)
+//	public void getProperty(Scenario scenario) {
+//		scenarioDef = baseUtil.features.createNode(scenario.getName());
+//	}
+	
 	@After (order = 0)
 	public void quitBrowser() {
 		driver.quit();
 	}
 	
-	@After (order = 1)
-	public void tearDown(Scenario scenario) {
-		if(scenario.isFailed()) {
-			
-			String screenshotName=scenario.getName().replaceAll(" ", "_");
-			byte[] sourcePath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			
-			scenario.attach(sourcePath, "image/png", screenshotName);
-		}
-	}
+//	@After (order = 1)
+//	public void tearDown(Scenario scenario) {
+////		if(scenario.isFailed()) {
+////			
+////			String screenshotName=scenario.getName().replaceAll(" ", "_");
+////			byte[] sourcePath =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+////			
+////			scenario.attach(sourcePath, "image/png", screenshotName);
+////		}
+//	}
 }

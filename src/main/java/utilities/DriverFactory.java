@@ -1,28 +1,22 @@
-package com.qa.factory;
+package utilities;
 
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.CapabilityType;
+
+import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	
-	public 	WebDriver driver;
+	public static RemoteWebDriver driver;
 	String nodeURL;
-	public static ThreadLocal<WebDriver> tlDriver= new ThreadLocal<>();
+	public static ThreadLocal<RemoteWebDriver> tlDriver= new ThreadLocal<RemoteWebDriver>();
 	
-	public WebDriver int_driver(String Port)  throws MalformedURLException {
+	public RemoteWebDriver int_driver(String Port)  throws MalformedURLException {
 		
 		//if(Port.equalsIgnoreCase("4546"))
         //{
@@ -47,11 +41,8 @@ public class DriverFactory {
                 System.out.println("Firefox Browser Initiated");
                 DesiredCapabilities capabilities1 = DesiredCapabilities.firefox();
                 capabilities1.setBrowserName("firefox");
-//                capabilities1.setVersion("85");
-//                capabilities1.setPlatform(Platform.LINUX);
-                //driver = new RemoteWebDriver(new URL(nodeURL),capabilities1);   
-                //System.setProperty("webdriver.gecko.driver","src/test/resources/webdriver/windows/geckodriver.exe");
-            	tlDriver.set(new RemoteWebDriver(new URL(nodeURL),capabilities1));
+                driver = new RemoteWebDriver(new URL(nodeURL),capabilities1);
+            	tlDriver.set(driver);
 //            }
 //            else
 //                
@@ -101,9 +92,8 @@ public class DriverFactory {
 	}
 	
 	
-	public static synchronized WebDriver getDriver() {
-		return tlDriver.get();
-		
+	public static synchronized RemoteWebDriver getDriver() {
+		return tlDriver.get();	
 	}
 
 }
