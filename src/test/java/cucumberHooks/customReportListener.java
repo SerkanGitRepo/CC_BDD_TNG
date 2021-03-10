@@ -177,7 +177,7 @@ public class customReportListener implements EventListener{
         } else {
             step.log(Status.FAIL, event.getResult().getError());
             	JiraServiceProvider jiraSp = new JiraServiceProvider();
-            	String issueSummary = "Test adýmýnda Hata oluþtu";
+            	String issueSummary = "Test adiminda Hata olustu";
             	String issueDescription = event.getResult().getError().toString();
             	
             	jiraSp.createJiraTicket("Bug - Hata", issueSummary, issueDescription,jiraSp.uName);
