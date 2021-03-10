@@ -116,22 +116,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Accounts Page Title&quot;, &quot;Optional[Account Page Feature]&quot;)">runScenario("Accounts Page Title", "Optional[Account Page Feature]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Accounts section count&quot;, &quot;Optional[Account Page Feature]&quot;)">runScenario("Accounts section count", "Optional[Account Page Feature]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Login Page Title&quot;, &quot;Optional[Login Page Feature]&quot;)">runScenario("Login Page Title", "Optional[Login Page Feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Accounts Page Title&quot;, &quot;Optional[Account Page Feature]&quot;)">runScenario("Accounts Page Title", "Optional[Account Page Feature]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Login with correct credentials&quot;, &quot;Optional[Login Page Feature]&quot;)">runScenario("Login with correct credentials", "Optional[Login Page Feature]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Accounts section count&quot;, &quot;Optional[Account Page Feature]&quot;)">runScenario("Accounts section count", "Optional[Account Page Feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -158,13 +158,14 @@
                   </a> <!-- runScenario("Forgot Password Link", "Optional[Login Page Feature]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Forgot Password Link", "Optional[Login Page Feature]")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: Forgot your password?11
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Forgot your password?11&quot;}
+  (Session info: chrome=88.0.4324.96)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ZHLEVL15008&apos;, ip: &apos;172.27.48.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 85.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210118153634, moz:geckodriverVersion: 0.29.0, moz:headless: false, moz:processID: 2799, moz:profile: /tmp/rust_mozprofilenoUWUQ, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.19.121-linuxkit, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: a9c0ed52-65fa-4372-96cf-de0...}
-Session ID: a9c0ed52-65fa-4372-96cf-de03b9b0fe2e
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /tmp/.com.google.Chrome.K0P4vk}, goog:chromeOptions: {debuggerAddress: localhost:34587}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 017e93d170f4e2361a6f26d8293...}
+Session ID: 017e93d170f4e2361a6f26d8293ff03f
 *** Element info: {Using=link text, value=Forgot your password?11}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -194,26 +195,6 @@ Session ID: a9c0ed52-65fa-4372-96cf-de03b9b0fe2e
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Accounts Page Title&quot;, &quot;Optional[Account Page Feature]&quot;)">
-                  </a> <!-- runScenario("Accounts Page Title", "Optional[Account Page Feature]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Accounts Page Title", "Optional[Account Page Feature]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Accounts section count&quot;, &quot;Optional[Account Page Feature]&quot;)">
-                  </a> <!-- runScenario("Accounts section count", "Optional[Account Page Feature]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Accounts section count", "Optional[Account Page Feature]")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="runScenario(&quot;Login Page Title&quot;, &quot;Optional[Login Page Feature]&quot;)">
                   </a> <!-- runScenario("Login Page Title", "Optional[Login Page Feature]") -->
                   <span class="method-name">runScenario</span>
@@ -224,10 +205,30 @@ Session ID: a9c0ed52-65fa-4372-96cf-de03b9b0fe2e
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="runScenario(&quot;Accounts Page Title&quot;, &quot;Optional[Account Page Feature]&quot;)">
+                  </a> <!-- runScenario("Accounts Page Title", "Optional[Account Page Feature]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Accounts Page Title", "Optional[Account Page Feature]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="runScenario(&quot;Login with correct credentials&quot;, &quot;Optional[Login Page Feature]&quot;)">
                   </a> <!-- runScenario("Login with correct credentials", "Optional[Login Page Feature]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Login with correct credentials", "Optional[Login Page Feature]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Accounts section count&quot;, &quot;Optional[Account Page Feature]&quot;)">
+                  </a> <!-- runScenario("Accounts section count", "Optional[Account Page Feature]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Accounts section count", "Optional[Account Page Feature]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -298,28 +299,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'parallel.ParallelRun')
-data.setCell(0, 3, 34134);
+data.setCell(0, 3, 26878);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'parallel.ParallelRun')
-data.setCell(1, 3, 33747);
+data.setCell(1, 3, 26609);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'parallel.ParallelRun')
-data.setCell(2, 3, 33402);
+data.setCell(2, 3, 26015);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'parallel.ParallelRun')
-data.setCell(3, 3, 27756);
+data.setCell(3, 3, 17738);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'parallel.ParallelRun')
-data.setCell(4, 3, 26987);
+data.setCell(4, 3, 17632);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -351,30 +352,30 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Login with correct credentials", "Optional[Login Page Feature]")</span>
-                <span class="method-start">533 ms</span>
+                <span class="method-name">runScenario("Login Page Title", "Optional[Login Page Feature]")</span>
+                <span class="method-start">835 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Accounts Page Title", "Optional[Account Page Feature]")</span>
+                <span class="method-start">835 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Accounts section count", "Optional[Account Page Feature]")</span>
-                <span class="method-start">533 ms</span>
+                <span class="method-start">835 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login with correct credentials", "Optional[Login Page Feature]")</span>
+                <span class="method-start">835 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Forgot Password Link", "Optional[Login Page Feature]")</span>
-                <span class="method-start">533 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Login Page Title", "Optional[Login Page Feature]")</span>
-                <span class="method-start">533 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Accounts Page Title", "Optional[Account Page Feature]")</span>
-                <span class="method-start">533 ms</span>
+                <span class="method-start">836 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">34676 ms</span>
+                <span class="method-start">27716 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

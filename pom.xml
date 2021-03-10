@@ -73,6 +73,11 @@
 	    <artifactId>commons-io</artifactId>
 	    <version>2.6</version>
 	</dependency>
+	<dependency>
+	    <groupId>net.rcarz</groupId>
+	    <artifactId>jira-client</artifactId>
+	    <version>0.5</version>
+	</dependency>
 </dependencies>
   <build>
     <plugins>

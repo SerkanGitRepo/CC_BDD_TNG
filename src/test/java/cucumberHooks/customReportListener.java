@@ -22,9 +22,11 @@ import io.cucumber.plugin.event.TestStepFinished;
 import io.cucumber.plugin.event.TestStepStarted;
 import utilities.DriverFactory;
 import utilities.ExtentReportUtil;
+import utilities.JiraServiceProvider;
 import io.cucumber.plugin.event.HookTestStep;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,7 +60,14 @@ public class customReportListener implements EventListener{
         publisher.registerHandlerFor(TestSourceRead.class, this::featureRead);
         publisher.registerHandlerFor(TestCaseStarted.class, this::ScenarioStarted);
         publisher.registerHandlerFor(TestStepStarted.class, this::stepStarted);
-        publisher.registerHandlerFor(TestStepFinished.class, this::stepFinished);
+        publisher.registerHandlerFor(TestStepFinished.class, event -> {
+			try {
+				stepFinished(event);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 
 		
 	};
@@ -72,13 +81,13 @@ public class customReportListener implements EventListener{
 
     // Here we create the reporter
     private void runStarted(TestRunStarted event) {
-    	//String path = System.getProperty("user.dir")+"\\reports\\index.html";
     	String path = "reports/index.html";
         spark = new ExtentSparkReporter(path);
         extent = new ExtentReports();
         spark.config().setTheme(Theme.DARK);
         // Create extent report instance with spark reporter
         extent.attachReporter(spark);
+        extent.setSystemInfo("Tester", "Automation");
     };
 
 
@@ -152,7 +161,7 @@ public class customReportListener implements EventListener{
 
 
     // This is triggered when TestStep is finished
-    private void stepFinished(TestStepFinished event) {
+    private void stepFinished(TestStepFinished event) throws ParseException {
 
 
         if (event.getResult().getStatus().toString() == "PASSED") {
@@ -167,8 +176,11 @@ public class customReportListener implements EventListener{
             step.log(Status.SKIP, "This step was skipped ");
         } else {
             step.log(Status.FAIL, event.getResult().getError());
-            
-            
+            	JiraServiceProvider jiraSp = new JiraServiceProvider();
+            	String issueSummary = "Test adýmýnda Hata oluþtu";
+            	String issueDescription = event.getResult().getError().toString();
+            	
+            	jiraSp.createJiraTicket("Bug - Hata", issueSummary, issueDescription,jiraSp.uName);
         }
     };
 
