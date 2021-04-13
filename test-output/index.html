@@ -5,7 +5,8 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -23,6 +24,7 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
@@ -116,7 +118,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Login Page Title&quot;, &quot;Optional[Login Page Feature]&quot;)">runScenario("Login Page Title", "Optional[Login Page Feature]")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Login with correct credentials&quot;, &quot;Optional[Login Page Feature]&quot;)">runScenario("Login with correct credentials", "Optional[Login Page Feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -126,7 +128,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Login with correct credentials&quot;, &quot;Optional[Login Page Feature]&quot;)">runScenario("Login with correct credentials", "Optional[Login Page Feature]")</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="parallel.ParallelRun" hash-for-method="runScenario(&quot;Login Page Title&quot;, &quot;Optional[Login Page Feature]&quot;)">runScenario("Login Page Title", "Optional[Login Page Feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -164,8 +166,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ZHLEVL15008&apos;, ip: &apos;172.27.48.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /tmp/.com.google.Chrome.K0P4vk}, goog:chromeOptions: {debuggerAddress: localhost:34587}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 017e93d170f4e2361a6f26d8293...}
-Session ID: 017e93d170f4e2361a6f26d8293ff03f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.96, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: /tmp/.com.google.Chrome.bXXjK7}, goog:chromeOptions: {debuggerAddress: localhost:45299}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 22fb0f0e2ccdf583c45cd72362f...}
+Session ID: 22fb0f0e2ccdf583c45cd72362f5c9ea
 *** Element info: {Using=link text, value=Forgot your password?11}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -195,10 +197,10 @@ Session ID: 017e93d170f4e2361a6f26d8293ff03f
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login Page Title&quot;, &quot;Optional[Login Page Feature]&quot;)">
-                  </a> <!-- runScenario("Login Page Title", "Optional[Login Page Feature]") -->
+                  <a name="runScenario(&quot;Login with correct credentials&quot;, &quot;Optional[Login Page Feature]&quot;)">
+                  </a> <!-- runScenario("Login with correct credentials", "Optional[Login Page Feature]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login Page Title", "Optional[Login Page Feature]")</span>
+                  <span class="parameters">("Login with correct credentials", "Optional[Login Page Feature]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -215,10 +217,10 @@ Session ID: 017e93d170f4e2361a6f26d8293ff03f
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Login with correct credentials&quot;, &quot;Optional[Login Page Feature]&quot;)">
-                  </a> <!-- runScenario("Login with correct credentials", "Optional[Login Page Feature]") -->
+                  <a name="runScenario(&quot;Login Page Title&quot;, &quot;Optional[Login Page Feature]&quot;)">
+                  </a> <!-- runScenario("Login Page Title", "Optional[Login Page Feature]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Login with correct credentials", "Optional[Login Page Feature]")</span>
+                  <span class="parameters">("Login Page Title", "Optional[Login Page Feature]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -299,23 +301,23 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'parallel.ParallelRun')
-data.setCell(0, 3, 26878);
+data.setCell(0, 3, 24749);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'parallel.ParallelRun')
-data.setCell(1, 3, 26609);
+data.setCell(1, 3, 24638);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'parallel.ParallelRun')
-data.setCell(2, 3, 26015);
+data.setCell(2, 3, 24233);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'parallel.ParallelRun')
-data.setCell(3, 3, 17738);
+data.setCell(3, 3, 19628);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'parallel.ParallelRun')
-data.setCell(4, 3, 17632);
+data.setCell(4, 3, 18305);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -352,34 +354,35 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Login Page Title", "Optional[Login Page Feature]")</span>
-                <span class="method-start">835 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runScenario("Accounts Page Title", "Optional[Account Page Feature]")</span>
-                <span class="method-start">835 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <span class="method-name">runScenario("Accounts section count", "Optional[Account Page Feature]")</span>
-                <span class="method-start">835 ms</span>
+                <span class="method-start">518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login Page Title", "Optional[Login Page Feature]")</span>
+                <span class="method-start">518 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Login with correct credentials", "Optional[Login Page Feature]")</span>
-                <span class="method-start">835 ms</span>
+                <span class="method-start">518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Accounts Page Title", "Optional[Account Page Feature]")</span>
+                <span class="method-start">518 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Forgot Password Link", "Optional[Login Page Feature]")</span>
-                <span class="method-start">836 ms</span>
+                <span class="method-start">519 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">27716 ms</span>
+                <span class="method-start">25270 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>
