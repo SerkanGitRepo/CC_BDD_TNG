@@ -2,6 +2,7 @@ package utilities;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
 
@@ -17,6 +18,9 @@ public class JiraServiceProvider {
 	public JiraClient jira;
 	public String project;
 	public String uName;
+	private int _Day,_Month, _Year;
+	private Date dtOrg;
+	private String _stringDate;
 	private ConfigReader configReader;
 	Properties prop;
 	
@@ -41,7 +45,21 @@ public class JiraServiceProvider {
 		try {
 			FluentCreate fluentCreate = jira.createIssue(project, issueType);
 			fluentCreate.field(Field.SUMMARY, summary);
-			Date date1=new SimpleDateFormat("dd/MM/yyyy").parse("09/03/2021");
+			
+			Date dt = new Date();
+			Calendar c = Calendar.getInstance(); 
+			c.setTime(dt); 
+			c.add(Calendar.DATE, 3);
+			dt = c.getTime();
+			
+			_Day= dt.getDay();
+			_Month=	dt.getMonth();
+			_Year= dt.getYear();
+			
+			_stringDate = String.valueOf(_Day) + "/" + String.valueOf(_Month) + "/" + String.valueOf(_Year);
+					
+			Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(_stringDate);
+			
 			fluentCreate.field(Field.DUE_DATE, date1);
 			
 			fluentCreate.field(Field.DESCRIPTION, description);
