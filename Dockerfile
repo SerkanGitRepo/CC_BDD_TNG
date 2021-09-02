@@ -2,7 +2,7 @@ FROM maven:3.6-jdk-8
 
 COPY src /home/CC_BDD_TNG/src
 
-//COPY reports /home/CC_BDD_TNG/reports
+# COPY reports /home/CC_BDD_TNG/reports
 
 COPY pom.xml /home/CC_BDD_TNG
 
