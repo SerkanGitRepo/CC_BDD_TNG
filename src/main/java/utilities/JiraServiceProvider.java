@@ -18,8 +18,7 @@ public class JiraServiceProvider {
 	public JiraClient jira;
 	public String project;
 	public String uName;
-	private int _Day,_Month, _Year;
-	private Date dtOrg;
+	private int _Day,_Mnth, _Year;
 	private String _stringDate;
 	private ConfigReader configReader;
 	Properties prop;
@@ -49,14 +48,12 @@ public class JiraServiceProvider {
 			Date dt = new Date();
 			Calendar c = Calendar.getInstance(); 
 			c.setTime(dt); 
-			c.add(Calendar.DATE, 3);
-			dt = c.getTime();
 			
-			_Day= dt.getDay();
-			_Month=	dt.getMonth();
-			_Year= dt.getYear();
+			_Day= c.get(Calendar.DAY_OF_MONTH)+4;
+			_Mnth=	c.get(Calendar.MONTH)+1;
+			_Year= c.get(Calendar.YEAR);
 			
-			_stringDate = String.valueOf(_Day) + "/" + String.valueOf(_Month) + "/" + String.valueOf(_Year);
+			_stringDate = String.valueOf(_Day) + "/" + String.valueOf(_Mnth) + "/" + String.valueOf(_Year);
 					
 			Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(_stringDate);
 			
